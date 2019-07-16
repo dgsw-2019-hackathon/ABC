@@ -10,7 +10,7 @@ $(document).ready(function(){
 		$(".navi>li a").not(this).next().slideUp(300);
 		return false;
 	});
-	$(".navi>li a").eq(0).trigger("click");
+//	$(".navi>li a").eq(0).trigger("click");
 	
 	$(".search-btn").click(function(){
 		var age = $("#age").val();
@@ -81,13 +81,13 @@ function showAlltoG(){
 	
 }
 
-//
-//function openNav(){
-//	$(".left-list").css({"width":"20%", "display":"block"});
-//}
-//
-//function closeNav(){
-//	$(".left-list").css({"width":"0px", "display":"none"});
-//}
-//
+
+function openNav(){
+	$(".left-list").css({"width":"100%", "display":"block"});
+}
+
+function closeNav(){
+	$(".left-list").css({"width":"0px", "display":"none"});
+}
+
 
