@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<meta charset="utf-8">
 		<title>App Recommand Application</title>
 		<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
 		<link href="https://fonts.googleapis.com/css?family=Montserrat|Nanum+Gothic|Noto+Sans+KR&display=swap" rel="stylesheet">
@@ -9,7 +10,7 @@
 		<link href="css/style.css" rel="stylesheet">
 		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 		<script src="js/script.js"></script>
-<!--		<script src="js/home.js"></script>-->
+		<script src="js/filter.js" defer></script>
 	</head>
 	<body>
 		<div class="wrap">
@@ -70,38 +71,53 @@
 							<div class="search-tab">
 								<div class="search-cate">
 									<p>연령</p>
-									<select name="fa" id="age">
-<!--										<option value="AA" selected>전체</option>-->
-										<option value="A10">10</option>
-										<option value="A20">20</option>
-										<option value="A30">30</option>
-										<option value="A40">40+</option>
-									</select>
+									<!--surround the select box with a "custom-select" DIV element. Remember to set the width:-->
+									<div class="custom-select" style="width:200px;">
+										<select name="fa" id="age" class="cate-select">
+											<option value="AA" selected>전체</option>
+											<option value="A10">10</option>
+											<option value="A20">20</option>
+											<option value="A30">30</option>
+											<option value="A40">40+</option>
+										</select>
+									</div>
 								</div>
 								<div class="search-cate">
 									<p>성별</p>
-									<select name="fs" id="gender">
-<!--										<option value="SA" selected>전체</option>-->
-										<option value="M">남성</option>
-										<option value="F">여성</option>
-									</select>
+									<!--surround the select box with a "custom-select" DIV element. Remember to set the width:-->
+									<div class="custom-select" style="width:200px;">
+										<select name="fs" id="gender" class="cate-select">
+											<option value="SA" selected>전체</option>
+											<option value="M">남성</option>
+											<option value="F">여성</option>
+										</select>
+									</div>
 								</div>
 								<div class="search-cate" id="search-genre">
 									<p>장르</p>
-									<select name="fg" id="genre">
-<!--										<option value="JA" selected>전체</option>-->
-										<option value="GAME">게임</option>
-										<option value="MUSIC">음악</option>
-										<option value="SOCIAL">소설</option>
-										<option value="FINANCIAL">금융</option>
-									</select>
+									<!--surround the select box with a "custom-select" DIV element. Remember to set the width:-->
+									<div class="custom-select" style="width:200px;">
+										<select name="fg" id="genre" class="cate-select">
+											<option value="JA">전체</option>
+											<option value="GAME" selected>게임</option>
+											<option value="MUSIC">음악</option>
+											<option value="SOCIAL">소셜</option>
+											<option value="FINANCIAL">금융</option>
+										</select>
+									</div>
 								</div>
 							</div>
 							<div class="search-tab">
+								<div class="search-cate"></div>
 								<div class="search-cate">
-									<input type="checkbox" name="" value="" class="search-check">필터
+<!--
+									<label class="container">필터
+										<input type="checkbox" name="" value="" class="search-check" checked>
+										<span class="checkmark"></span>
+									</label>
+-->
 								</div>
-								<div class="search-cate">
+								<div class="search-cate" style="text-align:right; margin-right:40px;">
 									<button class="search-btn">검색</button>
 								</div>
 							</div>
