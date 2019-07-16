@@ -3,25 +3,3 @@
 
 
 
-.wrap{
-	width:50%;
-	margin:auto;
-	text-align:center;
-}
-
-
-
-
-.search-tab{
-	display:flex;
-	flex-direction:row;
-	background:#FFF;
-}
-.search-cate{
-	flex:1;
-}
-.search-cate>p{
-	font-size:16px;
-}
-
-
