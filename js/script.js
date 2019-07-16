@@ -81,13 +81,22 @@ function showAlltoG(){
 	
 }
 
-
 function openNav(){
-	$(".left-list").css({"width":"100%", "display":"block"});
+	if (window.matchMedia("(min-width: 1400px)").matches) {
+		$(".left-list").css({"width":"50%"});
+	}
+	else if (window.matchMedia("(min-width: 800px)").matches) {
+		/* 뷰포트 너비가 800 픽셀 이상 */
+		$(".left-list").css({"width":"80%"});
+	}
+	else {
+		/* 뷰포트 너비가 800 픽셀 미만 */
+		$(".left-list").css({"width":"90%"});
+	}
 }
 
 function closeNav(){
-	$(".left-list").css({"width":"0px", "display":"none"});
+	$(".left-list").css({"width":"0px"});
 }
 
 
