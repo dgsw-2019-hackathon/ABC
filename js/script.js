@@ -29,6 +29,10 @@ $(document).ready(function(){
 function valueCodeResult(a, s, g){
 	var result = "";
 	
+	if (a == '' || s == '' || g == ''){
+		return false;
+	}
+	
 	if (a == "A10"){
 		result=result+"A1";
 	}
