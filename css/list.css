@@ -18,8 +18,8 @@ a{
 .wrap{
 	width:50%;
 	height:100%;
-	border:1px solid #AAA;
 	margin:auto;
+    background:#FDFDFD;
 }
 /************************/
 .left-list{
@@ -28,6 +28,7 @@ a{
 	left:0;
 	width:20%;
 	height:100%;
+    border-right:1px solid #AAA;
 	background:#FFF;
 	overflow-x:hidden;
 	transition:all 0.5s;
