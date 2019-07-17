@@ -102,5 +102,3 @@ function openNav(){
 function closeNav(){
 	$(".left-list").css({"width":"0px"});
 }
-
-
